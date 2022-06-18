@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import  {QrReader}  from 'react-qr-reader';
 
-const QrScanner = () => {
-  const [data, setData] = useState('No result');
+interface Props {
+  data: string;
+  setData: (newValue: string) => void;
+} 
 
+const QrScanner = ({data, setData}: Props) => {
   return (
     <>
       <QrReader
@@ -18,7 +21,7 @@ const QrScanner = () => {
           }
         }}
       />
-      <a href={data}>link</a>
+      <a href={data}>{data}</a>
     </>
   );
 }
