@@ -1,7 +1,11 @@
 import { useState } from 'react';
-const Quiz = () => {
-  const [name, setName] = useState(' ');
-  
+
+interface Props {
+  question?: string
+};
+
+const Quiz = ({question}: Props) => {
+  const [name, setName] = useState('');
 
   return (
     <div>
