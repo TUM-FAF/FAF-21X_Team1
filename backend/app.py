@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 users = []
 
-f = open('../questions.json')
+f = open('questions.json')
 questions = json.load(f)
 f.close()
 
@@ -54,7 +54,6 @@ def check(qr_id, name):
     user.points = points
 
     return jsonify({'answer': user_answer, 'points': points})
-
 
 if __name__ == '__main__':
      app.run()
