@@ -1,12 +1,12 @@
-import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import { Map } from './Map';
 
 function App() {
+
   return (
-    <div className="App">
-      <h1>
-        Hello world!
-      </h1>
-    </div>
+    <Router>
+      <Map />
+    </Router>
   );
 }
 
