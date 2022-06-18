@@ -1,12 +1,17 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch  } from "react-router-dom";
 import { Map } from './Map';
 
 function App() {
 
   return (
-    <Router>
-      <Map />
-    </Router>
+    <Switch>
+      <Route path='/qrcode'>
+        <div>qr code page here</div>
+      </Route>
+      <Route path='/'>
+        <Map />
+      </Route>
+    </Switch>
   );
 }
 
