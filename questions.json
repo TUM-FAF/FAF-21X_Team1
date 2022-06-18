@@ -1,31 +1,64 @@
 [
     {
-        "question": "Ce repara mesterul intr-un atelier?",
+        "question": "What does the craftsman fix in a workshop?",
         "answers": [
             {
-                "variant": "Incaltaminte",
+                "variant": "Shoes",
                 "score": 33
             },
             {
-                "variant": "Mobila",
+                "variant": "Furniture",
                 "score": 25
             },
             {
-                "variant": "Haine",
+                "variant": "Clothes",
                 "score": 20
             },  
             {
-                "variant": "Ceas",
+                "variant": "Clocks",
                 "score": 6
             }, 
             {
-                "variant": "Electrocasnice",
+                "variant": "Electronics",
                 "score": 5
             }, 
             {
-                "variant": "Masina",
+                "variant": "Car",
                 "score": 4
             }
+        ]
+    },
+    {
+        "question": "What do people consume in the heat?",
+        "answers": [
+            {
+                "variant": "Water",
+                "score": 52
+            },
+            {
+                "variant": "Beer",
+                "score": 11
+            },
+            {
+                "variant": "Ice-cream",
+                "score": 10
+            },  
+            {
+                "variant": "Tea",
+                "score": 8
+            }, 
+            {
+                "variant": "Cvas",
+                "score": 6
+            }, 
+            {
+                "variant": "Fruits",
+                "score": 5
+            },
+            {
+                "variant": "Compot",
+                "score": 3
+            },
         ]
     }
 ]
