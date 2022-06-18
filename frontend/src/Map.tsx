@@ -12,7 +12,7 @@ export const Map=() => {
     />
 
     <Link to="/qrcode">    
-      <button id="allbus" className="btn btn-success">All</button>
+      <button id="allbus" className="btn btn-success">QR Scan</button>
       </Link>
       {huntingLocData.map(hdata => (
         <Marker 
