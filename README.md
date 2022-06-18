@@ -7,5 +7,4 @@ You would use the camera to photo or scan the QR code and it would activate once
 users scanner the QR code, once the minimal ammount for users is reached the rewards will be given out
 to all the people who scanned the QR code.
 
-We settled on Discord Bot server.
 
