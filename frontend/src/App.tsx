@@ -1,15 +1,20 @@
 import './App.css';
 import { useState } from 'react';
 import QrScanner from './QrScanner';
+import Quiz from './Quiz';
 
 function App() {
   const [data, setData] = useState('No result');
+  const [shown, setShown] = useState(false);
+  
   return (
     <div className="App bg-blue">
       <h1>
-        Hello world!
+        QR Scanner
       </h1>
-      <QrScanner />
+      <Quiz />
+      <button onClick={()=>{setShown(prev => !prev)}}>Qr mode</button>
+      {shown? <QrScanner /> : null}
     </div>
   );
 }
