@@ -1,0 +1,31 @@
+[
+    {
+        "question": "Ce repara mesterul intr-un atelier?",
+        "answers": [
+            {
+                "variant": "Incaltaminte",
+                "score": 33
+            },
+            {
+                "variant": "Mobila",
+                "score": 25
+            },
+            {
+                "variant": "Haine",
+                "score": 20
+            },  
+            {
+                "variant": "Ceas",
+                "score": 6
+            }, 
+            {
+                "variant": "Electrocasnice",
+                "score": 5
+            }, 
+            {
+                "variant": "Masina",
+                "score": 4
+            }
+        ]
+    }
+]
