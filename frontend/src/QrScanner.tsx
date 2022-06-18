@@ -22,4 +22,4 @@ const QrScanner = () => {
     </>
   );
 }
-export default QrScanner
+export default QrScanner;
