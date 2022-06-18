@@ -1,3 +1,16 @@
+.leaflet-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.btn {
+    right: 20px;
+    top: 20px;
+    position: absolute;
+    height: 32px;
+    width: 100px;
+    z-index: 1000;
+}
 .App {
   text-align: center;
 }
