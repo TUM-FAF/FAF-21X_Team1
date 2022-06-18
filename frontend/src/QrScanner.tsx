@@ -18,7 +18,7 @@ const QrScanner = () => {
           }
         }}
       />
-      <p>{data}</p>
+      <a href={data}>link</a>
     </>
   );
 }
