@@ -25,15 +25,12 @@ class User:
         self.received_voucher = False
 
 def reset():
-    global users
-
     for user in users:
         del user
 
     users = []
 
 def get_user(name):
-    global users
     print(users, name, [u for u in users if u.name == name])
     return [u for u in users if u.name == name][0]
 
@@ -47,8 +44,6 @@ def add_cors(response):
 # response: questions
 @app.route('/qr/<int:qr_id>/<string:name>', methods=['POST'])
 def qr(qr_id, name):
-    global users
-
     if [u for u in users if u.name == name]:
         return jsonify({"message": "Already registered"})
 
