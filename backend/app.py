@@ -81,7 +81,7 @@ def check(qr_id, name):
 @app.route('/result/<string:name>', methods=['GET'])
 def result(name):
     win = False
-    voucher = None
+    message = None
 
     if len(users) >= MIN_USERS:
         score = 0
@@ -91,7 +91,7 @@ def result(name):
             score += user.points
 
         win = score >= POINTS_THRESHOLD
-        voucher = '../voucher.png' if win else '../shrug.png'
+        message = {'message': 'win'} if win else {'message': 'wait'}
 
         user = get_user(name)
         user.received_voucher = True
@@ -103,9 +103,7 @@ def result(name):
         if everyone_got_vouchers:
             reset()
         
-        print(users)
-    
-    return send_file(voucher)
+    return jsonify(message)
 
 
 @app.route('/coordinates', methods=['GET', 'POST'])
