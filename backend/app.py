@@ -5,6 +5,8 @@ from flask import jsonify, request, send_file
 import json
 import random
 
+import asyncio
+
 app = Flask(__name__)
 
 users = []
@@ -32,7 +34,7 @@ def reset():
 
     users = []
 
-def get_user(name):
+async def get_user(name):
     print(users, name, [u for u in users if u.name == name])
     return [u for u in users if u.name == name][0]
 
@@ -60,8 +62,8 @@ def qr(qr_id, name):
 
 
 @app.route('/check/<int:qr_id>/<string:name>', methods=['POST'])
-def check(qr_id, name):
-    user = get_user(name)
+async def check(qr_id, name):
+    user = await get_user(name)
     print(user)
     if user.answered:
         return jsonify({'message': 'Already answered'})
