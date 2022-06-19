@@ -44,10 +44,10 @@ def add_cors(response):
 # response: questions
 @app.route('/qr/<int:qr_id>/<string:name>', methods=['POST'])
 def qr(qr_id, name):
+    global users
+    
     if [u for u in users if u.name == name]:
         return jsonify({"message": "Already registered"})
-
-    global users
 
     user = User(name)
     users.append(user)
