@@ -33,7 +33,7 @@ def reset():
     users = []
 
 def get_user(name):
-    print(users)
+    print(users, name, [u for u in users if u.name == name])
     return [u for u in users if u.name == name][0]
 
 @app.after_request
