@@ -33,6 +33,7 @@ def reset():
     users = []
 
 def get_user(name):
+    global users
     print(users, name, [u for u in users if u.name == name])
     return [u for u in users if u.name == name][0]
 
