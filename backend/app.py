@@ -53,7 +53,8 @@ def qr(qr_id, name):
 
     user = User(name)
     users.append(user)
-    print(users)
+    print([user.name for user in users])
+    print(len(users))
     question = questions[qr_id - 1]['question']
 
     return jsonify({"question": question})
