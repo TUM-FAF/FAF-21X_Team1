@@ -53,7 +53,7 @@ def qr(qr_id, name):
 
     user = User(name)
     users.append(user)
-
+    print(users)
     question = questions[qr_id - 1]['question']
 
     return jsonify({"question": question})
@@ -62,7 +62,7 @@ def qr(qr_id, name):
 @app.route('/check/<int:qr_id>/<string:name>', methods=['POST'])
 def check(qr_id, name):
     user = get_user(name)
-    print(user)
+
     if user.answered:
         return jsonify({'message': 'Already answered'})
 
