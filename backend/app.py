@@ -61,7 +61,7 @@ def qr(qr_id, name):
 @app.route('/check/<int:qr_id>/<string:name>', methods=['POST'])
 def check(qr_id, name):
     user = get_user(name)
-
+    print(user)
     if user.answered:
         return jsonify({'message': 'Already answered'})
 
@@ -71,10 +71,11 @@ def check(qr_id, name):
 
     if user_answer.lower() in [answer['variant'].lower() for answer in answers]:
         points = [answer['score'] for answer in answers if answer['variant'].lower() == user_answer.lower()][0]
-    
+    print(points)
     user.points = points
     user.answered = True
-
+    print(user.points)
+    print(user.answered)
     return jsonify({'answer': user_answer, 'points': points})
 
 
