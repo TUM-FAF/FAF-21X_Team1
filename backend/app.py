@@ -47,6 +47,8 @@ def qr(qr_id, name):
     if [u for u in users if u.name == name]:
         return jsonify({"message": "Already registered"})
 
+    global users
+
     user = User(name)
     users.append(user)
     print([user.name for user in users])
